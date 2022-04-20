@@ -7,11 +7,11 @@ const Post = ({post}) => {
     const {id, title} = post;
     return (
         <div>
-            {/*{id} -- {title} <Button to={`${id}`} state={post}>get Details</Button>*/}
+            {id} -- {title} <Button to={`${id}`} state={post}>get Details</Button>
             {/*{id} -- {title} <button onClick={()=>navigate(id.toString(), {replace:true})}>go to users</button>*/}
-            <Link to={id.toString()} state={post} >
-                <button className={css.button}>{children}</button>
-            </Link>
+            {/*<Link to={id.toString()} state={post} >*/}
+            {/*    <button className={css.button}>{children}</button>*/}
+            {/*</Link>*/}
         </div>
     );
 };

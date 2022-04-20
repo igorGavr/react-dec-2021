@@ -13,6 +13,7 @@ const PostsPage = () => {
     return (
         <div style={{display:'flex'}}>
             <div>{posts.map(post => <Post key={post.id} post={post}/>)}</div>
+
             <div><Outlet/></div>
         </div>
     );
