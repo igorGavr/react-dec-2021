@@ -1,18 +1,14 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {loadPosts} from "../redux/actions";
+import {loadPosts} from "../redux/actions.creators";
 
 export function Posts() {
 
     let postsDefaultState = useSelector(({postsState}) => postsState);
     let dispatch = useDispatch();
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(value => value.json())
-            .then(value => {
-                loadPosts(value, dispatch);
-            });
 
+        dispatch(loadPosts());
     }, [])
     return (
         <div>
