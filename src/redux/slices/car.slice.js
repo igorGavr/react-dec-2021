@@ -53,9 +53,6 @@ const carSlice = createSlice({
                 state.formErrors = formErrors
                 console.log(action.type);
             })
-            .addDefaultCase((state, action) => {
-                console.log(action.type);
-            })
     }
     // extraReducers: {
     //     [getAll.pending]: (state, action) => {
